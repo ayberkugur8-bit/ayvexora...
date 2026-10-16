@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>ayvexora.web | Ayberk Uğur - Ultra Premium Web Tasarım & Dijital Satış</title>
+  <meta name="description"
+    content="ayvexora.web - Ayberk Uğur tarafından işletilen yeni nesil web tasarım stüdyosu. İşletmenizi zirveye taşıyan, mobil ve tablet uyumlu, 48 saatte anahtar teslim lüks web siteleri.">
+  <meta name="keywords"
+    content="ayvexora.web, Ayberk Uğur, web sitesi satın al, web tasarım, lüks web sitesi, kurumsal web tasarım, e-ticaret sitesi, hazır web sitesi, mobil uyumlu web sitesi">
+  <meta name="author" content="Ayberk Uğur - ayvexora.web">
+  <meta name="theme-color" content="#06070a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ayvexora.web | Ayberk Uğur - Web Tasarım & Dijital Çözümler">
+  <meta property="og:description"
+    content="İşletmenize özel, yüksek dönüşümlü ve ultra lüks web siteleri. Sıfır sunucu masrafı, 48 saatte anahtar teslim!">
+  <meta property="og:site_name" content="ayvexora.web">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. TASARIM DEĞİŞKENLERİ VE TEMEL SIFIRLAMA
+       ========================================================================== */
+    :root {
+      --bg-main: #06070a;
+      --bg-surface: #0c0d14;
+      --bg-card: rgba(15, 17, 26, 0.78);
+      --bg-card-hover: rgba(24, 27, 42, 0.92);
+      --bg-glass: rgba(255, 255, 255, 0.03);
+
+      /* Kraliyet Altını Paleti */
+      --gold-primary: #D4AF37;
+      --gold-light: #F9E79F;
+      --gold-bright: #F7D070;
+      --gold-dark: #9A7B1C;
+      --gold-metallic: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+
+      /* İletişim & Aksanlar */
+      --wa-color: #25D366;
+      --phone-color: #3B82F6;
+      --accent-violet: #8B5CF6;
+      --ig-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+
+      /* Kenarlıklar */
+      --border-subtle: rgba(212, 175, 55, 0.14);
+      --border-gold: rgba(212, 175, 55, 0.4);
+      --border-glass: rgba(255, 255, 255, 0.08);
+
+      /* Tipografi */
+      --text-main: #FFFFFF;
+      --text-silver: #E2E8F0;
+      --text-muted: #94A3B8;
+
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Cinzel', serif;
+      --font-code: 'Space Grotesk', monospace;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 32px;
+      --radius-full: 9999px;
+
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-silver);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 12% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 88% 25%, rgba(139, 92, 246, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 50% 60%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gold-text {
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      font-weight: 800;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 60px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.75rem);
+      color: var(--text-main);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+    }
+
+    /* Ortak Butonlar */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      border: none;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: var(--gold-metallic);
+      color: #0b0c10;
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.55);
+    }
+
+    .btn-wa {
+      background: var(--wa-color);
+      color: #FFFFFF;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    }
+    .btn-wa:hover {
+      background: #20BA5A;
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--border-gold);
+      backdrop-filter: blur(10px);
+    }
+    .btn-glass:hover {
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    /* Üst Canlı Çubuk */
+    .top-bar {
+      background: #090a10;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.82rem;
+      padding: 10px 0;
+    }
+
+    .top-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.35);
+      border-radius: var(--radius-full);
+      color: var(--wa-color);
+      font-weight: 700;
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--wa-color);
+      border-radius: 50%;
+      animation: pulseLive 1.8s infinite;
+    }
+
+    @keyframes pulseLive {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(6, 7, 10, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-gem {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(212, 175, 55, 0.2);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #FFFFFF;
+    }
+    .brand-title span {
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-silver);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: var(--gold-bright); }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-nav-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-silver);
+      text-decoration: none;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      color: #FFFFFF;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* Mobil Çekmece */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(320px, 85vw);
+      height: 100vh;
+      background: #090a10;
+      border-left: 1px solid var(--border-gold);
+      z-index: 1000;
+      padding: 30px 24px;
+      transition: right 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .mobile-drawer.open { right: 0; }
+
+    .mobile-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-backdrop.open { opacity: 1; pointer-events: auto; }
+
+    .drawer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .drawer-nav a {
+      color: var(--text-silver);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero-section {
+      padding: 70px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--text-muted);
+      margin-bottom: 35px;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(16px);
+      margin-top: 40px;
+    }
+
+    .metric-box { text-align: center; }
+    .metric-num {
+      font-family: var(--font-code);
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Mockup */
+    .mockup-window {
+      background: #0d0f17;
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95);
+    }
+    .mockup-header {
+      background: #141724;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .mockup-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .dot-red { background: #ef4444; } .dot-yellow { background: #f59e0b; } .dot-green { background: #10b981; }
+
+    .mockup-canvas {
+      padding: 28px;
+      background: #090b12;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Gridler */
+    .services-grid, .packages-grid, .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .service-card, .pkg-card, .portfolio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 34px 28px;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-card:hover, .pkg-card:hover, .portfolio-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--border-gold);
+    }
+
+    .pkg-card.vip {
+      background: linear-gradient(180deg, rgba(28, 24, 14, 0.85) 0%, rgba(15, 17, 26, 0.95) 100%);
+      border: 2px solid var(--gold-bright);
+      transform: scale(1.03);
+    }
+
+    .pkg-status-badge {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    /* Hesaplayıcı / Kapsam Belirleyici */
+    .calc-card, .about-card, .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-xl);
+      padding: 45px;
+      backdrop-filter: blur(20px);
+    }
+
+    .calc-steps-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+    }
+
+    .calc-options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .calc-option {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+    .calc-option:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--border-gold);
+    }
+    .calc-option.selected {
+      background: rgba(212, 175, 55, 0.12);
+      border-color: var(--gold-bright);
+    }
+
+    .opt-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold-light);
+    }
+
+    .summary-total-box {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    /* S.S.S. Akordeon */
+    .faq-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .faq-header {
+      padding: 22px 28px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+    }
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+      padding: 0 28px;
+      color: var(--text-muted);
+    }
+    .faq-item.active .faq-body {
+      max-height: 300px;
+      padding-bottom: 22px;
+    }
+
+    /* Form */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .form-input, .form-select, .form-textarea {
+      background: #090b12;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .form-textarea { resize: vertical; min-height: 100px; }
+
+    /* Sabit Yüzen WhatsApp Butonu */
+    .floating-box {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .float-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      font-weight: 700;
+      color: #fff;
+    }
+    .float-wa {
+      background: #25D366;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    /* Footer */
+    .footer {
+      background: #040508;
+      border-top: 1px solid var(--border-subtle);
+      padding: 60px 0 30px;
+      margin-top: 80px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+
+    /* RESPONSIVE KURALLARI */
+    @media (max-width: 1024px) {
+      .hero-grid, .calc-steps-grid, .footer-grid { grid-template-columns: 1fr; }
+      .services-grid, .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .packages-grid { grid-template-columns: 1fr; max-width: 580px; margin: 0 auto; }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar, .nav-menu { display: none; }
+      .mobile-toggle { display: block; }
+      .services-grid, .portfolio-grid, .calc-options-grid, .form-row { grid-template-columns: 1fr; }
+      .hero-metrics { grid-template-columns: repeat(2, 1fr); }
+      .calc-card, .about-card, .contact-card { padding: 24px 18px; }
+      .float-btn span { display: none; }
+      .float-btn { padding: 14px; border-radius: 50%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span class="live-badge"><span class="live-dot"></span> Canlı Destek Aktif</span>
+        <span>⚡ <strong>48 Saatte</strong> Anahtar Teslim Lüks Web Siteleri</span>
+        <span>•</span>
+        <span style="color:var(--gold-light);">Kurucu: <strong>Ayberk Uğur</strong></span>
+      </div>
+      <div>
+        <a href="tel:05060362862" style="color:var(--text-silver); text-decoration:none; font-weight:700;">📞 0506 036 28 62</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-logo">
+        <div class="brand-gem">💎</div>
+        <div>
+          <div class="brand-title">AYVEXORA<span>.WEB</span></div>
+          <div style="font-size:0.7rem; color:var(--text-muted); letter-spacing:1px;">Ayberk Uğur Digital Studio</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hizmetler" class="nav-link">Hizmetler</a></li>
+          <li><a href="#paketler" class="nav-link">Paketlerimiz</a></li>
+          <li><a href="#portfoy" class="nav-link">Portföy</a></li>
+          <li><a href="#kurucu" class="nav-link">Ayberk Uğur</a></li>
+          <li><a href="#kapsam" class="nav-link">Kapsam Belirle</a></li>
+          <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/905060362862" target="_blank" class="btn btn-wa" style="padding:10px 20px; font-size:0.88rem;">
+          💬 WhatsApp Teklif Al
+        </a>
+        <button class="mobile-toggle" onclick="toggleMobileNav()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBİL MENÜ ÇEKMECESİ -->
+  <div class="mobile-backdrop" id="mobileBackdrop" onclick="toggleMobileNav()"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:15px; border-bottom:1px solid #222;">
+        <span class="brand-title">AYVEXORA<span>.WEB</span></span>
+        <button onclick="toggleMobileNav()" style="background:none; border:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
+      </div>
+      <ul class="drawer-nav">
+        <li><a href="#hizmetler" onclick="toggleMobileNav()">💎 Hizmetler</a></li>
+        <li><a href="#paketler" onclick="toggleMobileNav()">📦 Paket Çözümleri</a></li>
+        <li><a href="#portfoy" onclick="toggleMobileNav()">🎨 Portföy Demoları</a></li>
+        <li><a href="#kurucu" onclick="toggleMobileNav()">👤 Ayberk Uğur</a></li>
+        <li><a href="#kapsam" onclick="toggleMobileNav()">⚡ Kapsam Belirle</a></li>
+        <li><a href="#iletisim" onclick="toggleMobileNav()">📞 İletişim</a></li>
+      </ul>
+    </div>
+    <a href="https://wa.me/905060362862" target="_blank" class="btn btn-wa" style="width:100%;">WhatsApp Canlı Hat</a>
+  </aside>
+
+  <!-- HERO -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="section-badge">✨ 2026 Yeni Nesil Web Tasarım & Dijital Satış</div>
+          <h1 class="hero-title">
+            İşletmenizi Zirveye Taşıyan <br>
+            <span class="gold-text">Ultra Lüks & Satış Odaklı</span> Web Siteleri.
+          </h1>
+          <p class="hero-description">
+            Telefon, tablet ve bilgisayarda kusursuz çalışan, <strong>sıfır sunucu masraflı</strong> ve müşterilerinizi anında doğrudan WhatsApp siparişine yönlendiren modern web siteleri yapıyoruz.
+          </p>
+          <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20i%C5%9Fletmem%20i%C3%A7in%20web%20sitesi%20teklifi%20almak%20istiyorum."
+              target="_blank" class="btn btn-gold">
+              🚀 Hemen Teklif Alın
+            </a>
+            <a href="#portfoy" class="btn btn-glass">Canlı Demoları İncele</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-box">
+              <div class="metric-num gold-text">48 Saat</div>
+              <div class="metric-label">Hızlı Teslimat</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-num">Ömür Boyu</div>
+              <div class="metric-label">Ücretsiz Hosting & SSL</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-num">%100</div>
+              <div class="metric-label">Mobil Uyumlu</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-num">7/24</div>
+              <div class="metric-label">Birebir Destek</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Görsel Vitrin Kartı -->
+        <div>
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <span class="mockup-dot dot-red"></span>
+              <span class="mockup-dot dot-yellow"></span>
+              <span class="mockup-dot dot-green"></span>
+              <span style="font-family:var(--font-code); font-size:0.75rem; color:var(--gold-light); margin-left:10px;">https://ayvexora.web/isletmeniz</span>
+            </div>
+            <div class="mockup-canvas">
+              <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-gold); padding:20px; border-radius:14px;">
+                <div style="color:var(--gold-bright); font-size:0.75rem; font-weight:700;">PREMIUM WEB ATÖLYESİ</div>
+                <h3 style="color:#fff; font-size:1.3rem; margin:8px 0;">Göz Alıcı Tasarım, Maksimum Satış</h3>
+                <p style="color:var(--text-muted); font-size:0.85rem;">Ayberk Uğur güvencesiyle her cihazda ışıldayan elit arayüz.</p>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:0.8rem; color:#ddd;">
+                <div style="padding:10px; background:#111; border-radius:8px;">📱 iPhone & Android Tam Uyum</div>
+                <div style="padding:10px; background:#111; border-radius:8px;">💬 Tek Tıkla WhatsApp Sipariş</div>
+                <div style="padding:10px; background:#111; border-radius:8px;">⚡ 256-Bit SSL Güvenlik</div>
+                <div style="padding:10px; background:#111; border-radius:8px;">🔍 Google Harita & SEO Kaydı</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HİZMETLER -->
+  <section class="container" id="hizmetler" style="padding:80px 24px;">
+    <div class="section-header">
+      <div class="section-badge">Hizmetlerimiz</div>
+      <h2 class="section-title">İşletmenizin İhtiyacı Olan <span class="gold-text">Tüm Çözümler</span></h2>
+      <p class="section-subtitle">Sektörünüz ne olursa olsun, müşterilerinizi etkileyen modern yapılar kuruyoruz.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>🏢 Kurumsal Firma Siteleri</h3>
+        <p style="color:var(--text-muted); margin:14px 0;">Prestijli, güven aşılayan, Google harita ve arama butonlu kurumsal vitrin siteleri.</p>
+        <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20kurumsal%20web%20sitesi%20teklifi%20almak%20istiyorum." target="_blank" class="btn btn-glass" style="width:100%;">Özel Teklif Al</a>
+      </div>
+      <div class="service-card">
+        <h3>⚡ Satış Odaklı Landing Page</h3>
+        <p style="color:var(--text-muted); margin:14px 0;">Reklam trafiğinizi anında siparişe dönüştüren ultra hızlı tek sayfa satış sayfaları.</p>
+        <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20Landing%20Page%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" class="btn btn-glass" style="width:100%;">Özel Teklif Al</a>
+      </div>
+      <div class="service-card">
+        <h3>🛍️ Butik E-Ticaret & Katalog</h3>
+        <p style="color:var(--text-muted); margin:14px 0;">Ürünlerinizi sergileyen ve siparişi doğrudan WhatsApp sepetiyle alan modern mağazalar.</p>
+        <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20E-Ticaret%20sitesi%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" class="btn btn-glass" style="width:100%;">Özel Teklif Al</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAKETLERİMİZ (FİYATSIZ - TEKLİF ODAKLI) -->
+  <section class="container" id="paketler" style="padding:80px 24px;">
+    <div class="section-header">
+      <div class="section-badge">Çözüm Seçeneklerimiz</div>
+      <h2 class="section-title">İhtiyacınıza Uygun <span class="gold-text">Paket Modelleri</span></h2>
+      <p class="section-subtitle">Aylık gizli aidat yok, tek seferlik anahtar teslim çalışma modeli.</p>
+    </div>
+    <div class="packages-grid">
+      <!-- Standart -->
+      <div class="pkg-card">
+        <div>
+          <span class="pkg-status-badge">⚡ HIZLI VE ETKİLİ</span>
+          <h3 style="font-size:1.8rem; color:#fff; margin:10px 0;">Standart Paket</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:18px;">
+            Hızlıca dijitale açılmak, müşterilerine şık ve modern bir kartvizit sunmak isteyen işletmeler için.
+          </p>
+          <ul style="list-style:none; margin:20px 0; color:#ddd; display:flex; flex-direction:column; gap:10px;">
+            <li>✓ Modern Tek Sayfa Tasarım Mimarisi</li>
+            <li>✓ %100 Telefon & Tablet Uyumu</li>
+            <li>✓ WhatsApp Sipariş & Doğrudan Arama Butonu</li>
+            <li>✓ Ömür Boyu Ücretsiz Hosting & 256-bit SSL</li>
+            <li>✓ 48 Saatte Canlı Teslimat</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20Standart%20Paket%20web%20sitesi%20hakk%C4%B1nda%20teklif%20almak%20istiyorum." target="_blank" class="btn btn-glass" style="width:100%;">
+          Standart Paket Teklifi Al
+        </a>
+      </div>
+
+      <!-- VIP -->
+      <div class="pkg-card vip">
+        <div>
+          <span class="pkg-status-badge" style="background:rgba(212,175,55,0.25); border-color:var(--gold-bright);">👑 EN ÇOK TERCİH EDİLEN</span>
+          <h3 style="font-size:1.8rem; color:#fff; margin:10px 0;">Premium VIP Paket</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:18px;">
+            Rakiplerinden ayrışmak, lüks altın detaylarla en üst düzey prestij algısı yaratmak isteyenler için.
+          </p>
+          <ul style="list-style:none; margin:20px 0; color:#ddd; display:flex; flex-direction:column; gap:10px;">
+            <li>✓ Ultra Lüks Altın & Koyu Tema Özel Tasarım</li>
+            <li>✓ Çok Sayfalı / Kapsamlı Bölümler</li>
+            <li>✓ Akıllı Teklif / Kapsam Belirleme Modülü</li>
+            <li>✓ Gelişmiş Google SEO ve Harita Kaydı</li>
+            <li>✓ Sınırsız Revizyon Güvencesi</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20Premium%20VIP%20Paket%20web%20sitesi%20hakk%C4%B1nda%20teklif%20almak%20istiyorum." target="_blank" class="btn btn-gold" style="width:100%;">
+          VIP Paket Teklifi İste
+        </a>
+      </div>
+
+      <!-- Özel Mimari -->
+      <div class="pkg-card">
+        <div>
+          <span class="pkg-status-badge">💎 ÖZEL MİMARİ</span>
+          <h3 style="font-size:1.8rem; color:#fff; margin:10px 0;">Bespoke Proje</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:18px;">
+            E-ticaret, dinamik katalog, rezervasyon veya özel sektörel sistemler gerektiren projeler için.
+          </p>
+          <ul style="list-style:none; margin:20px 0; color:#ddd; display:flex; flex-direction:column; gap:10px;">
+            <li>✓ Sıfırdan İşletmeye Özel Kodlama</li>
+            <li>✓ Dinamik Ürün / Menü Yönetimi</li>
+            <li>✓ Çoklu Dil Desteği (TR / EN vb.)</li>
+            <li>✓ Özel API & Sipariş Bildirimleri</li>
+            <li>✓ Birebir Dijital Büyüme Danışmanlığı</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20%C3%96zel%20Mimari%20web%20sitesi%20projem%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" class="btn btn-glass" style="width:100%;">
+          Özel Proje Teklifi Al
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANLI PORTFÖY VİTRİNİ -->
+  <section class="container" id="portfoy" style="padding:80px 24px;">
+    <div class="section-header">
+      <div class="section-badge">Canlı Vitrin</div>
+      <h2 class="section-title">Örnek <span class="gold-text">Sektörel Projeler</span></h2>
+      <p class="section-subtitle">Tüm cihazlarda test edilmiş, yüksek dönüşümlü canlı tasarım örnekleri.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div style="height:180px; background:radial-gradient(circle, #3B82F6 0%, #0F172A 80%); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:3rem;">
+          🏋️‍♂️
+        </div>
+        <div style="margin-top:16px;">
+          <span style="font-size:0.75rem; color:var(--gold-light); font-weight:700;">FITNESS & SPOR SALONU</span>
+          <h3 style="color:#fff; margin:6px 0;">Anytime Gym VIP Club</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:14px;">Koyu temalı, üyelik paketleri ve WhatsApp deneme dersi randevu akışı.</p>
+          <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20Anytime%20Gym%20benzeri%20bir%20site%20istiyorum." target="_blank" class="btn btn-gold" style="width:100%; font-size:0.85rem; padding:10px;">Bunun Gibi İstiyorum</a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div style="height:180px; background:radial-gradient(circle, #EF4444 0%, #18090C 80%); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:3rem;">
+          🐟
+        </div>
+        <div style="margin-top:16px;">
+          <span style="font-size:0.75rem; color:var(--gold-light); font-weight:700;">RESTORAN & GURME</span>
+          <h3 style="color:#fff; margin:6px 0;">Aslan Balık Restaurant</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:14px;">Günlük taze deniz ürünleri menüsü, masa rezervasyonu ve WhatsApp hattı.</p>
+          <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20Aslan%20Bal%C4%B1k%20benzeri%20bir%20restoran%20sitesi%20istiyorum." target="_blank" class="btn btn-gold" style="width:100%; font-size:0.85rem; padding:10px;">Bunun Gibi İstiyorum</a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div style="height:180px; background:radial-gradient(circle, #D4AF37 0%, #1A1506 80%); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:3rem;">
+          💎
+        </div>
+        <div style="margin-top:16px;">
+          <span style="font-size:0.75rem; color:var(--gold-light); font-weight:700;">LÜKS MÜCEVHER & SAAT</span>
+          <h3 style="color:#fff; margin:6px 0;">Aurelia Diamond Studio</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:14px;">Altın detaylar, zengin koleksiyon vitrini ve özel randevu sistemi.</p>
+          <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20Aurelia%20M%C3%BCcevher%20benzeri%20l%C3%BCks%20bir%20site%20istiyorum." target="_blank" class="btn btn-gold" style="width:100%; font-size:0.85rem; padding:10px;">Bunun Gibi İstiyorum</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KURUCU / AYBERK UĞUR -->
+  <section class="container" id="kurucu" style="padding:80px 24px;">
+    <div class="about-card">
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div class="section-badge">Hakkımızda & Vizyon</div>
+        <h2 style="font-family:var(--font-heading); color:#fff; font-size:2rem;">
+          İşletmenizin Dijital Mimarı: <span class="gold-text">Ayberk Uğur</span>
+        </h2>
+        <p style="color:var(--text-silver); font-size:1.05rem; line-height:1.7;">
+          Merhaba, ben <strong>Ayberk Uğur</strong>. <strong>ayvexora.web</strong> çatısı altında amacım; işletme sahiplerini yoran, karmaşık ve aylık bakım masrafları çıkaran eski usul web siteleri yerine, hem telefonlarda hem de bilgisayarlarda ışık hızında açılan, satış ve müşteri odaklı elit yapılar kurmaktır.
+        </p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:10px;">
+          <a href="https://wa.me/905060362862" target="_blank" class="btn btn-gold">Ayberk Uğur ile Birebir WhatsApp Görüşmesi</a>
+          <a href="tel:05060362862" class="btn btn-glass">📞 0506 036 28 62</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJE KAPSAMI VE ÖZELLİK BELİRLEYİCİ (FİYATSIZ) -->
+  <section class="container" id="kapsam" style="padding:80px 24px;">
+    <div class="section-header">
+      <div class="section-badge">Akıllı Kapsam Robotu</div>
+      <h2 class="section-title">İstediğiniz Özellikleri Seçin, <span class="gold-text">Teklifinizi Alın</span></h2>
+      <p class="section-subtitle">İşletmenize uygun özellikleri belirleyin, doğrudan Ayberk Uğur'a WhatsApp üzerinden iletin.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-steps-grid">
+        <div>
+          <h4 style="color:#fff; margin-bottom:14px;">1. Site Modelini Seçin</h4>
+          <div class="calc-options-grid" id="modelGrid">
+            <div class="calc-option selected" data-name="Landing Page (Tek Sayfa)" onclick="selectModel(this)">
+              <span>Landing Page (Tek Sayfa)</span>
+              <span class="opt-tag">Hızlı & Etkili</span>
+            </div>
+            <div class="calc-option" data-name="Kurumsal Çok Sayfalı Web Sitesi" onclick="selectModel(this)">
+              <span>Kurumsal Çok Sayfalı Site</span>
+              <span class="opt-tag">Kurumsal</span>
+            </div>
+            <div class="calc-option" data-name="WhatsApp E-Ticaret Mağaza" onclick="selectModel(this)">
+              <span>WhatsApp E-Ticaret Mağaza</span>
+              <span class="opt-tag">Sipariş Odaklı</span>
+            </div>
+            <div class="calc-option" data-name="Restoran & Kafe QR Menü Sitesi" onclick="selectModel(this)">
+              <span>Restoran QR Menü Sitesi</span>
+              <span class="opt-tag">Mobil Menü</span>
+            </div>
+          </div>
+
+          <h4 style="color:#fff; margin-bottom:14px;">2. İsteğe Bağlı Ek Özellikler</h4>
+          <div class="calc-options-grid">
+            <div class="calc-option" data-name="Gelişmiş Google SEO ve Harita Kaydı" onclick="toggleScopeItem(this)">
+              <span>Google SEO & Harita Kaydı</span>
+              <span class="opt-tag">Görünürlük</span>
+            </div>
+            <div class="calc-option" data-name="Çoklu Dil Desteği (İngilizce / TR)" onclick="toggleScopeItem(this)">
+              <span>Çoklu Dil Desteği</span>
+              <span class="opt-tag">Global</span>
+            </div>
+            <div class="calc-option" data-name="24 Saatte Süper Hızlı Teslimat" onclick="toggleScopeItem(this)">
+              <span>24 Saatte Hızlı Teslimat</span>
+              <span class="opt-tag">Ekspres</span>
+            </div>
+            <div class="calc-option selected" data-name="Ömür Boyu Ücretsiz Hosting & SSL" onclick="toggleScopeItem(this)">
+              <span>Ömür Boyu Ücretsiz Hosting & SSL</span>
+              <span class="opt-tag" style="background:#10B981; color:#fff;">Dahil</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="background:#090a10; border:1px solid #222; border-radius:18px; padding:28px;">
+            <h4 style="color:#fff; margin-bottom:14px; border-bottom:1px solid #222; padding-bottom:10px;">Seçilen Kapsam Özeti</h4>
+            <div id="scopeSummaryText" style="color:#ccc; font-size:0.9rem; min-height:90px; line-height:1.7;">
+              • Landing Page (Tek Sayfa)<br>• Ömür Boyu Ücretsiz Hosting & SSL
+            </div>
+            <div class="summary-total-box">
+              <span style="font-weight:700; color:#fff;">Seçilen Modüller:</span>
+              <span id="scopeCountDisplay" style="font-family:var(--font-code); font-size:1.4rem; font-weight:800; color:var(--gold-bright);">2 Özellik</span>
+            </div>
+            <button class="btn btn-wa" style="width:100%; font-size:1rem;" onclick="sendScopeToWhatsApp()">
+              💬 Bu Kapsam İçin Teklif İste
+            </button>
+            <div style="text-align:center; font-size:0.75rem; color:var(--text-muted); margin-top:10px;">
+              ⚡ Ayberk Uğur projenizi inceleyip size özel teklif sunacaktır.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM & WHATSAPP FORMU (FİYATSIZ) -->
+  <section class="container" id="iletisim" style="padding:80px 24px;">
+    <div class="contact-card">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+        <div>
+          <div class="section-badge">Hemen Başlayalım</div>
+          <h2 style="font-family:var(--font-heading); color:#fff; font-size:2rem; margin-bottom:14px;">
+            Doğrudan İletişim
+          </h2>
+          <p style="color:var(--text-muted); margin-bottom:24px;">
+            Sorularınız ve projeniz için bize dilediğiniz zaman ulaşabilirsiniz. Ayberk Uğur bizzat dönüş yapacaktır.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <a href="https://wa.me/905060362862" target="_blank" class="btn btn-wa" style="justify-content:flex-start;">
+              💬 WhatsApp: 0506 036 28 62
+            </a>
+            <a href="tel:05060362862" class="btn btn-glass" style="justify-content:flex-start;">
+              📞 Telefon: 0506 036 28 62
+            </a>
+            <a href="https://www.instagram.com/ayvexora.web" target="_blank" class="btn btn-glass" style="justify-content:flex-start;">
+              📸 Instagram: @ayvexora.web
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <form onsubmit="handleInquirySubmit(event)" style="display:flex; flex-direction:column; gap:14px;">
+            <input type="text" id="custName" class="form-input" placeholder="Adınız & Soyadınız *" required>
+            <input type="text" id="custBiz" class="form-input" placeholder="İşletmeniz / Sektörünüz *" required>
+            <select id="custPkg" class="form-select">
+              <option value="Premium VIP Paket">👑 Premium VIP Paket</option>
+              <option value="Standart Paket">⚡ Standart Paket</option>
+              <option value="Özel Mimari & E-Ticaret">💎 Özel Mimari / E-Ticaret</option>
+              <option value="Mevcut Siteyi Yenileme">🔄 Mevcut Sitemi Yenilemek İstiyorum</option>
+            </select>
+            <textarea id="custNote" class="form-textarea" placeholder="İstediğiniz sitenin detayları veya notlarınız..."></textarea>
+            <button type="submit" class="btn btn-gold" style="width:100%;">Ayberk Uğur'a WhatsApp'tan Gönder</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="brand-title">AYVEXORA<span>.WEB</span></span>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:14px 0;">
+            İşletmelere özel yüksek dönüşümlü lüks web siteleri yapıp satan yeni nesil tasarım stüdyosu.
+          </p>
+        </div>
+        <div>
+          <h4 style="color:#fff; margin-bottom:12px;">Hızlı Menü</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Ana Sayfa</a></li>
+            <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+            <li><a href="#paketler">Paket Seçenekleri</a></li>
+            <li><a href="#kurucu">Ayberk Uğur</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#fff; margin-bottom:12px;">Sosyal Medya</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/ayvexora.web" target="_blank">Instagram: @ayvexora.web</a></li>
+            <li><a href="https://www.tiktok.com/@ayvexora.web" target="_blank">TikTok: @ayvexora.web</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#fff; margin-bottom:12px;">Doğrudan İletişim</h4>
+          <p style="color:#fff; font-weight:700;">📞 0506 036 28 62</p>
+          <p style="color:var(--text-muted); font-size:0.85rem;">İşleten: Ayberk Uğur</p>
+        </div>
+      </div>
+      <div style="text-align:center; padding-top:24px; color:var(--text-muted); font-size:0.8rem;">
+        &copy; 2026 <strong>ayvexora.web</strong> | İşleten: <strong>Ayberk Uğur</strong>. Tüm hakları saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <!-- SABİT YÜZEN WHATSAPP BUTONU -->
+  <div class="floating-box">
+    <a href="https://wa.me/905060362862?text=Merhaba%20Ayberk%20Bey%2C%20ayvexora.web%20%C3%BCzerinden%20web%20sitesi%20teklifi%20almak%20istiyorum."
+      target="_blank" class="float-btn float-wa" title="WhatsApp Canlı Destek">
+      <span>💬 WhatsApp'tan Yazın</span>
+    </a>
+  </div>
+
+  <script>
+    const PHONE = "905060362862";
+
+    function toggleMobileNav() {
+      document.getElementById('mobileDrawer').classList.toggle('open');
+      document.getElementById('mobileBackdrop').classList.toggle('open');
+    }
+
+    // Kapsam Seçici Mantığı (Fiyatsız)
+    let selectedModel = "Landing Page (Tek Sayfa)";
+    let selectedFeatures = ["Ömür Boyu Ücretsiz Hosting & SSL"];
+
+    function selectModel(el) {
+      document.querySelectorAll('#modelGrid .calc-option').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedModel = el.getAttribute('data-name');
+      updateScopeDisplay();
+    }
+
+    function toggleScopeItem(el) {
+      const name = el.getAttribute('data-name');
+      el.classList.toggle('selected');
+      if (el.classList.contains('selected')) {
+        if (!selectedFeatures.includes(name)) selectedFeatures.push(name);
+      } else {
+        selectedFeatures = selectedFeatures.filter(f => f !== name);
+      }
+      updateScopeDisplay();
+    }
+
+    function updateScopeDisplay() {
+      let html = `• <strong>${selectedModel}</strong><br>`;
+      selectedFeatures.forEach(f => {
+        html += `• ${f}<br>`;
+      });
+      document.getElementById('scopeSummaryText').innerHTML = html;
+      const count = 1 + selectedFeatures.length;
+      document.getElementById('scopeCountDisplay').textContent = `${count} Özellik Seçili`;
+    }
+
+    function sendScopeToWhatsApp() {
+      let msg = `Merhaba Ayberk Bey! 👋%0Aayvexora.web sitenizden projem için özellikler seçtim:%0A%0A`;
+      msg += `🌐 *Site Modeli:* ${encodeURIComponent(selectedModel)}%0A`;
+      if (selectedFeatures.length > 0) {
+        msg += `⚡ *Seçilen Ek Özellikler:*%0A`;
+        selectedFeatures.forEach(f => { msg += `- ${encodeURIComponent(f)}%0A`; });
+      }
+      msg += `%0ABu kapsam için işletmeme özel teklif ve detayları alabilir miyim?`;
+
+      window.open(`https://wa.me/${PHONE}?text=${msg}`, '_blank');
+    }
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const n = document.getElementById('custName').value;
+      const b = document.getElementById('custBiz').value;
+      const p = document.getElementById('custPkg').value;
+      const note = document.getElementById('custNote').value;
+
+      let msg = `Merhaba Ayberk Bey! 👋%0Aayvexora.web üzerinden ulaşıyorum.%0A%0A`;
+      msg += `👤 *İsim:* ${encodeURIComponent(n)}%0A`;
+      msg += `🏢 *İşletme / Sektör:* ${encodeURIComponent(b)}%0A`;
+      msg += `📦 *İlgilendiğim Paket:* ${encodeURIComponent(p)}%0A`;
+      msg += `📝 *Notlar:* ${encodeURIComponent(note || 'Belirtilmedi')}%0A%0A`;
+      msg += `Teklif ve bilgi alabilir miyim?`;
+
+      window.open(`https://wa.me/${PHONE}?text=${msg}`, '_blank');
+    }
+
+    // Başlangıçta çalıştır
+    updateScopeDisplay();
+  </script>
+</body>
+
+</html>
